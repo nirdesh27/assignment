@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "0268a5fe-118b-43f7-8e34-45bdd60be3f0",
+		"name": "kubernetes_setup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3163159"
+	},
+	"item": [
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stage.dev/api/users/signup/",
+					"protocol": "https",
+					"host": [
+						"stage",
+						"dev"
+					],
+					"path": [
+						"api",
+						"users",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signOut",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stage.dev/api/users/signout/",
+					"protocol": "https",
+					"host": [
+						"stage",
+						"dev"
+					],
+					"path": [
+						"api",
+						"users",
+						"signout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test4@test.com\",\n    \"password\": \"qwerty123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stage.dev/api/users/signin/",
+					"protocol": "https",
+					"host": [
+						"stage",
+						"dev"
+					],
+					"path": [
+						"api",
+						"users",
+						"signin",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCurrentUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test4@test.com\",\n    \"password\": \"qwerty123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stage.dev/api/users/currentuser",
+					"protocol": "https",
+					"host": [
+						"stage",
+						"dev"
+					],
+					"path": [
+						"api",
+						"users",
+						"currentuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n          \"id\": \"1234522214\",\n          \"title\": \"list1\",\n          \"description\": \"film\",\n          \"genres\": [\n              \"Action\"\n          ]\n      }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stage.dev/api/users/add-list/",
+					"protocol": "https",
+					"host": [
+						"stage",
+						"dev"
+					],
+					"path": [
+						"api",
+						"users",
+						"add-list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove-list",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://stage.dev/api/users/remove-list/1234522212",
+					"protocol": "https",
+					"host": [
+						"stage",
+						"dev"
+					],
+					"path": [
+						"api",
+						"users",
+						"remove-list",
+						"1234522212"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://stage.dev/api/users/my-list?page=2&limit=10",
+					"protocol": "https",
+					"host": [
+						"stage",
+						"dev"
+					],
+					"path": [
+						"api",
+						"users",
+						"my-list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
